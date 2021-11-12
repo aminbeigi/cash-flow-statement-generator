@@ -1,22 +1,10 @@
+from month import Month
+
 class Category:
-    # TODO: replace with built-in consts?
-    JAN = 1
-    FEB = 2
-    MAR = 3
-    APR = 4
-    MAY = 5
-    JUN = 6
-    JUL = 7
-    AUG = 8
-    SEP = 9
-    OCT = 10
-    NOV = 11
-    DEC = 12
-    
     def __init__(self, category_type: str):
         self.category_type = category_type
         self.yearly_total = 0
-        self.monthly_total = {i:0 for i in range(1,13)}
+        self.monthly_total = {i:0 for i in range(Month.JAN.value, Month.DEC.value+1)}
 
     def add(self, value: int, month: int):
         self.monthly_total[month] += int(value)
