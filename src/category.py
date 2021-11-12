@@ -7,6 +7,8 @@ class Category:
         self.monthly_total = {i:0 for i in range(Month.JAN.value, Month.DEC.value+1)}
 
     def add(self, value: int, month: int):
+        if value <= 0:
+            raise ValueError("Transaction value must be greater than 0.")
         self.monthly_total[month] += int(value)
         self.yearly_total += int(value)
 
