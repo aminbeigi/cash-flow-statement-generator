@@ -3,9 +3,9 @@ from category import Category
 from month import Month
 
 """
-Simple script to extract monthly cash inflows and outflows from a transaction sheet.
+Simple script to extract monthly cash inflow and outflow via a transaction sheet.
 
-format for excel file: Date | (money inflow/outflow) | Transaction ID | Balance
+format for excel file: [ date | (money inflow/outflow) | transaction ID | balance ]
 """
 
 PATH_TO_TRANSACTION_DATA = "./data/transaction_data-template.xlsx"
@@ -36,8 +36,7 @@ if __name__ == '__main__':
             outflow.add(transaction_value*-1, row[DATE].month)
         else:
             raise ValueError("Transaction amount can not be 0.")
-    print(inflow)
-    # print out monthy outflows and inflow
+
     monthly_inflow = inflow.get_monthly()
     yearly_inflow = inflow.get_yearly()
     monthly_outflow = outflow.get_monthly()
