@@ -8,7 +8,7 @@ Simple script to extract monthly cash inflow and outflow via a transaction sheet
 format for excel file: [ date | (money inflow/outflow) | transaction ID | balance ]
 """
 
-PATH_TO_TRANSACTION_DATA = "./data/transaction_data-template.xlsx"
+PATH_TO_TRANSACTION_DATA = "./data/transaction_data.xlsx"
 DATE = 0
 TRANSACTION_VALUE = 1
 TRANSACTION_STR = 2
