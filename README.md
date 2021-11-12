@@ -14,12 +14,18 @@
 </p>
 
 ## Description
-I created this repo to automate the process of generating a simple personal cash flow statement via a list of transactions.  
+I created this small script to automate the process of generating a simple personal cash flow statement via a list of transactions.  
 To see the supported format of the transaction data, see [transaction_data-template-xlsx](/data/transaction_data-template.xlsx).
 
 ## Instructions
 1. Clone repo `git clone git@github.com:aminbeigi/cash-flow-statement-generator.git`
 2. Rename or replace template file `data/transaction_data-template.xlsx` to `data/transaction_data.xlsx`
+3. Run `src/main.py`
+
+## Example
+Running the script on the given template [transaction data](/data/transaction_data-template.xlsx), the output below is generated.
+
+<img src="images\example.png"/>
 
 ## Requirements
 * Python 3.8.10+
