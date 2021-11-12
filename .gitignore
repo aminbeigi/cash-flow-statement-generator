@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data files
+data/transaction_data.xlsx
+src/project-venv/
