@@ -131,3 +131,4 @@ dmypy.json
 # Data files
 data/transaction_data.xlsx
 src/project-venv/
+.vscode/
