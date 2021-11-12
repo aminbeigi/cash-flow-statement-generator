@@ -42,13 +42,13 @@ if __name__ == '__main__':
     monthly_outflow = outflow.get_monthly()
     yearly_outflow = outflow.get_yearly()
 
-    headers = [ ["Inflow"] + [total for total in monthly_inflow.values()] + [yearly_inflow],
+    data = [ ["Inflow"] + [total for total in monthly_inflow.values()] + [yearly_inflow],
             ["Outflow"] + [total for total in monthly_outflow.values()] + [yearly_outflow],
             ["Net"] + [calculate_net(monthly_inflow[index], monthly_outflow[index]) for index in range(Month.JAN.value, Month.DEC.value+1)] + [calculate_net(yearly_inflow, yearly_outflow)]
         ]
     
-    df = pd.DataFrame(headers, columns = ['Category', Month.JAN.name, Month.FEB.name, Month.MAR.name, Month.APR.name,
+    df1 = pd.DataFrame(data, columns = ['Category', Month.JAN.name, Month.FEB.name, Month.MAR.name, Month.APR.name,
                                     Month.MAY.name, Month.JUN.name, Month.JUL.name, Month.AUG.name, Month.SEP.name,
                                     Month.OCT.name, Month.NOV.name, Month.DEC.name, 'Total'
                                     ])
-    print(df)
+    print(df1)
