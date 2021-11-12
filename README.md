@@ -14,7 +14,7 @@
 </p>
 
 ## Description
-I created this small script to automate the process of generating a simple personal cash flow statement via a list of transactions.  
+I created this small script to automate the process of generating a simple personal cash flow statement via a list of transactions. The output generated is text on the command line interface.  
 To see the supported format of the transaction data, see [transaction_data-template-xlsx](/data/transaction_data-template.xlsx).
 
 ## Instructions
